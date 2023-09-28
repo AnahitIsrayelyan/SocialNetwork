@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div>
+    <h2>Register</h2>
+    <form method="POST" action="">
+      {{ form.csrf_token }}
+      
+      <div>
+        <label for="username">Username</label>
+        {{ form.username(placeholder="Enter your username") }}
+        {% if form.username.errors %}
+          <small>{{ form.username.errors[0] }}</small>
+        {% endif %}
+      </div>
+      
+      <div>
+        <label for="email">Email</label>
+        {{ form.email(placeholder="Enter your email") }}
+        {% if form.email.errors %}
+          <small>{{ form.email.errors[0] }}</small>
+        {% endif %}
+      </div>
+      
+      <div>
+        <label for="password">Password</label>
+        {{ form.password(placeholder="Enter your password") }}
+        {% if form.password.errors %}
+          <small>{{ form.password.errors[0] }}</small>
+        {% endif %}
+      </div>
+      
+      <div>
+        <label for="password2">Confirm Password</label>
+        {{ form.password2(placeholder="Confirm your password") }}
+        {% if form.password2.errors %}
+          <small>{{ form.password2.errors[0] }}</small>
+        {% endif %}
+      </div>
+      
+      <div>
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+

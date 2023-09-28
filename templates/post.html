@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div>
+    <h2>Create New Post</h2>
+    <form method="POST" action="">
+      
+      {% for field in form %}
+        <div>
+          {{ field.label }}
+          {{ field(class="form-control") }}
+        </div>
+        {% if field.errors %}
+          <div>
+            <small>{{ field.errors[0] }}</small>
+          </div>
+        {% endif %}
+      {% endfor %}
+      
+      <div>
+        <button type="submit">Post</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

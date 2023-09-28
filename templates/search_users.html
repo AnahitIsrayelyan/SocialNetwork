@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div>
+    <h2>Search for Users</h2>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.search_query.label }}
+        {{ form.search_query(class="form-control") }}
+      </div>
+      <div>
+        <button type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <div>
+    <h2>Search Results</h2>
+    <ul>
+      {% for user in users %}
+        <li>
+          {{ user.username }}
+          {% if user != current_user and user not in current_user.following() %}
+            <a href="{{ url_for('follow', username=user.username) }}">Follow</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
