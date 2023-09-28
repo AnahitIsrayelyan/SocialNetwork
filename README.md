@@ -33,11 +33,10 @@ The application will be available at `http://localhost:8080`.
 ## Project Structure
 
 - `app.py`: The main application file that defines routes and handles requests.
-- `forms.py`: Contains form classes for user registration, login, posting, and searching.
+- `forms.py`: Contains form classes for user registration, login, posting.
 - `models.py`: Defines database models for users, posts, and relationships.
 - `run.py`: Initializes the database, creates a test user, and starts the Flask application.
 - `templates/`: Directory containing HTML templates for rendering web pages.
-- `static/`: Directory for static files like CSS and JavaScript (not included in your code snippet).
 
 ## Usage
 
