@@ -45,7 +45,6 @@ The application will be available at `http://localhost:8080`.
 3. Post: Share thoughts by creating new posts.
 4. Follow: Connect with other users by following their profiles.
 5. Explore: View a stream of posts from users you follow on the home page.
-6. Search: Look for users by their usernames using the search feature.
-7. Following: See posts from users you follow on the "Following" page.
+6. Following: See posts from users you follow on the "Following" page.
 
 
