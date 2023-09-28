@@ -47,29 +47,18 @@ def register():
             email=form.email.data,
             password=form.password.data
         )
-        # print('!!!!validation passed!!!!!')
         return redirect(url_for('stream'))
     
     # If validation fails, collect the validation errors
     validation_errors = form.errors
     
-    # print('not passed!!!!!!', validation_errors)
     return render_template('register.html', form=form, validation_errors=validation_errors)
 
 
 @app.route('/search_users', methods=['GET', 'POST'])
 @login_required
 def search_users():
-    # form = forms.SearchForm(request.form)
-    # print('in search_user function..............')
-    # if request.method == 'GET' and form.validate():
-    #     print('in if................')
-    #     search_query = form.search_query.data  
-    #     users = models.User.search_users(search_query)
-    # else:
-    #     print('in else................')
-    #     users = []
-    # return render_template('search_users.html', users=users)
+    ...
     return url_for('/')
 
 
@@ -88,7 +77,6 @@ def login():
                 return redirect(url_for('index'))
             else:
                 flash('Invalid email or password', 'error')
-    # print('not logged in')
     return render_template('login.html', form=form)
 
 
