@@ -16,24 +16,13 @@ This is a simple social networking application built using Flask. Users can regi
 ## How to Run
 
 1. Clone this GitHub repository:
-  ```
-  git clone <repository-url>
-  ```
 
-3. Install the required Python packages:
+2. Install the required Python packages:
   ```
   pip install -r requirements.txt
   ```
 
-5. Set up the database:
-
-- The project uses an SQLite database named `social.db`. You can create it by running the following command:
-
-  ```
-  python run.py
-  ```
-
-4. Run the application:
+3. Run the application:
   ```
   python run.py
   ```
